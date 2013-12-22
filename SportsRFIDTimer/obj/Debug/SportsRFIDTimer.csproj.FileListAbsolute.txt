@@ -1,0 +1,1 @@
+c:\users\jorl\documents\visual studio 2012\Projects\SportsRFIDTimer\SportsRFIDTimer\bin\Debug\SportsRFIDTimer.exe.config
