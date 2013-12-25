@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracts;
 using Griffin.Container;
 
-namespace Repository
+namespace SportsRFIDTimer.Repository
 {
     [Component]
     public class UserMemoryRepository : IUserRepository
@@ -28,12 +26,9 @@ namespace Repository
             var existing = _users.SingleOrDefault(t => t.Id == entity.Id);
             if (existing != null)
             {
-                _users.Insert(_users.IndexOf(existing), entity);
+                _users.Remove(existing);
             }
-            else
-            {
-                _users.Add(entity);
-            }
+            _users.Add(entity);
         }
 
         public void Delete(User entity)
@@ -52,7 +47,12 @@ namespace Repository
 
         public IEnumerable<User> Find(string text)
         {
-            return _users.Where(t => t.Name.Contains(text));
+            return _users.Where(t => t.Name.ToLower().Contains(text.ToLower()));
+        }
+
+        public User FindByTag(string idString)
+        {
+            return _users.First(t => t.TagId.ToLower().Equals(idString.ToLower()));
         }
     }
 }

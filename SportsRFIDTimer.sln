@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsRFIDTimer", "SportsRFIDTimer\SportsRFIDTimer.csproj", "{0068F045-BE29-42DF-B950-1C7474BFF551}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsRFIDTimer.SportsRFIDTimer", "SportsRFIDTimer\SportsRFIDTimer.SportsRFIDTimer.csproj", "{0068F045-BE29-42DF-B950-1C7474BFF551}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{99916CB5-2FC5-42BA-B377-48057A204078}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsRFIDTimer.Contracts", "Contracts\SportsRFIDTimer.Contracts.csproj", "{99916CB5-2FC5-42BA-B377-48057A204078}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{80571198-2826-49E2-B75C-3A675987F568}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsRFIDTimer.Tests", "Tests\SportsRFIDTimer.Tests.csproj", "{80571198-2826-49E2-B75C-3A675987F568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{DA28FCEF-967A-4EE5-92AE-1B29BA9E4B8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsRFIDTimer.Repository", "Repository\SportsRFIDTimer.Repository.csproj", "{DA28FCEF-967A-4EE5-92AE-1B29BA9E4B8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsRFIDTimer.RFIDProvider", "RFIDProvider\SportsRFIDTimer.RFIDProvider.csproj", "{472EDE1C-4046-4853-ABA8-06DD1D2E5228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsRFIDTimer.BusinessLogic", "BusinessLogic\SportsRFIDTimer.BusinessLogic.csproj", "{16390993-CB3D-4A24-9537-491F218E60DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsRFIDTimer.Domain", "Domain\SportsRFIDTimer.Domain.csproj", "{911F8441-4C1E-4573-B02D-FF2A4A512414}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,8 +37,23 @@ Global
 		{DA28FCEF-967A-4EE5-92AE-1B29BA9E4B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA28FCEF-967A-4EE5-92AE-1B29BA9E4B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA28FCEF-967A-4EE5-92AE-1B29BA9E4B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{472EDE1C-4046-4853-ABA8-06DD1D2E5228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472EDE1C-4046-4853-ABA8-06DD1D2E5228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472EDE1C-4046-4853-ABA8-06DD1D2E5228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472EDE1C-4046-4853-ABA8-06DD1D2E5228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16390993-CB3D-4A24-9537-491F218E60DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16390993-CB3D-4A24-9537-491F218E60DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16390993-CB3D-4A24-9537-491F218E60DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16390993-CB3D-4A24-9537-491F218E60DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{911F8441-4C1E-4573-B02D-FF2A4A512414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911F8441-4C1E-4573-B02D-FF2A4A512414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911F8441-4C1E-4573-B02D-FF2A4A512414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911F8441-4C1E-4573-B02D-FF2A4A512414}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 	EndGlobalSection
 EndGlobal

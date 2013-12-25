@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracts;
 
-namespace Repository
+namespace SportsRFIDTimer.Repository
 {
     public class UserRepository : IUserRepository
     {
@@ -30,6 +27,11 @@ namespace Repository
         }
 
         public IEnumerable<User> Find(string text)
+        {
+            throw new NotImplementedException();
+        }
+
+        public User FindByTag(string idString)
         {
             throw new NotImplementedException();
         }

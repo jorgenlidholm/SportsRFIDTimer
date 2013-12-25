@@ -3,7 +3,7 @@ using Contracts;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Tests.Contracts
+namespace SportsRFIDTimer.Tests.Contracts
 {
     [TestClass]
     public class UserTest

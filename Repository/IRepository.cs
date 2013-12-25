@@ -1,5 +1,5 @@
 ﻿
-namespace Repository
+namespace SportsRFIDTimer.Repository
 {
     public interface IRepository<TEntity, in TKey> where TEntity : class
     {

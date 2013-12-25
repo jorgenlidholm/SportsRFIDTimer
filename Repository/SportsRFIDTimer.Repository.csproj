@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99916CB5-2FC5-42BA-B377-48057A204078}</ProjectGuid>
+    <ProjectGuid>{DA28FCEF-967A-4EE5-92AE-1B29BA9E4B8F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Contracts</RootNamespace>
-    <AssemblyName>Contracts</AssemblyName>
+    <RootNamespace>SportsRFIDTimer.Repository</RootNamespace>
+    <AssemblyName>SportsRFIDTimer.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Griffin.Container">
+      <HintPath>..\packages\Griffin.Container.1.1.0\lib\net40\Griffin.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Griffin.Logging">
+      <HintPath>..\packages\Griffin.Logging.1.0.2\lib\net40\Griffin.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,8 +45,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="User.cs" />
+    <Compile Include="ApplicationStateMemoryRepository.cs" />
+    <Compile Include="ApplicationStateRepository.cs" />
+    <Compile Include="IApplicationStateRepository.cs" />
+    <Compile Include="IRaceRepository.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IResultRepository.cs" />
+    <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaceMemoryRepository.cs" />
+    <Compile Include="RaceRepository.cs" />
+    <Compile Include="ResultMemoryRepository.cs" />
+    <Compile Include="UserMemoryRepository.cs" />
+    <Compile Include="UserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\SportsRFIDTimer.Contracts.csproj">
+      <Project>{99916CB5-2FC5-42BA-B377-48057A204078}</Project>
+      <Name>SportsRFIDTimer.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
