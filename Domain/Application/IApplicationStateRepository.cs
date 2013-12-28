@@ -1,7 +1,6 @@
 ﻿using System;
-using Contracts;
 
-namespace SportsRFIDTimer.Repository
+namespace SportsRFIDTimer.Domain.Application
 {
     public interface IApplicationStateRepository : IRepository<ApplicationState,String>
     {

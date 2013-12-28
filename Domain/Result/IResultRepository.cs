@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Contracts;
-using SportsRFIDTimer.Contracts;
 
-namespace SportsRFIDTimer.Repository
+namespace SportsRFIDTimer.Domain.Result
 {
     public interface IResultRepository : IRepository<Result, Guid>
     {

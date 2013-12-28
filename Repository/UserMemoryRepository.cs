@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Contracts;
 using Griffin.Container;
+using SportsRFIDTimer.Domain.User;
 
 namespace SportsRFIDTimer.Repository
 {
     [Component]
     public class UserMemoryRepository : IUserRepository
     {
-        private List<User> _users;
+        private readonly List<User> _users;
  
         public UserMemoryRepository()
         {

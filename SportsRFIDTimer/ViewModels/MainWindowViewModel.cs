@@ -14,6 +14,7 @@ namespace SportsRFIDTimer.ViewModels
     {
         private readonly ILogger _logger = LogManager.GetLogger<MainWindowViewModel>();
         public IList<MenuItemViewModel> Settings { get; set; }
+        public IList<MenuItemViewModel> Help { get; set; } 
 
         public MainWindowViewModel()
         {
@@ -27,6 +28,24 @@ namespace SportsRFIDTimer.ViewModels
                             IsCheckable = false
                         }
                 };
+
+            Help = new List<MenuItemViewModel>
+                {
+                    new MenuItemViewModel
+                        {
+                            Name = "About",
+                            ActivateCommand = new ActionCommand(ShowAboutDialog),
+                            IsCheckable = false,
+                            IsChecked = false
+                        }
+                };
+        }
+
+        private void ShowAboutDialog()
+        {
+            _logger.Debug("Show about dialgo");
+            var dialog = new DialogWindow("About", new AboutUserControl());
+            dialog.Show();
         }
 
         private void ManageUsers()

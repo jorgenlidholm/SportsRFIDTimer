@@ -1,7 +1,7 @@
 ﻿using System;
 using Griffin.Decoupled.DomainEvents;
 
-namespace SportsRFIDTimer.Contracts.DomainEvents
+namespace SportsRFIDTimer.Domain.Events
 {
     public class MessageLogged : DomainEventBase
     {

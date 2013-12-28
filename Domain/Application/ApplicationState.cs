@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Contracts
+namespace SportsRFIDTimer.Domain.Application
 {
     public class ApplicationState
     {

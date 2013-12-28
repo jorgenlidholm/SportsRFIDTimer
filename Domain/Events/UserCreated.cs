@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Griffin.Logging;
 
-namespace SportsRFIDTimer.Contracts.DomainEvents
+namespace SportsRFIDTimer.Domain.Events
 {
     public class UserCreated
     {

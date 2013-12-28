@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Contracts;
+using SportsRFIDTimer.Domain.User;
 
 namespace SportsRFIDTimer.Repository
 {

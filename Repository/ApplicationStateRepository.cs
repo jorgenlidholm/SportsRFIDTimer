@@ -1,5 +1,5 @@
 ﻿using System;
-using Contracts;
+using SportsRFIDTimer.Domain.Application;
 
 namespace SportsRFIDTimer.Repository
 {

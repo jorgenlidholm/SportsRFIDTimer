@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Contracts;
 using Griffin.Container;
-using SportsRFIDTimer.Contracts;
+using SportsRFIDTimer.Domain.Result;
 
 namespace SportsRFIDTimer.Repository
 {

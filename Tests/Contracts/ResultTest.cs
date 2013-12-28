@@ -1,8 +1,7 @@
 ﻿using System;
-using Contracts;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SportsRFIDTimer.Contracts;
+using SportsRFIDTimer.Domain.Result;
 
 namespace SportsRFIDTimer.Tests.Contracts
 {

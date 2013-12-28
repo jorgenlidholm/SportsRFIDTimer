@@ -7,15 +7,15 @@ namespace SportsRFIDTimer
 {
     public class DomainLogger : ILogger
     {
-        private static Dictionary<Type,ILogger> _loggers = new Dictionary<Type, ILogger>();
-        private string _typeName;
+        private static readonly Dictionary<Type,ILogger> Loggers = new Dictionary<Type, ILogger>();
+        private readonly string _typeName;
 
         public static ILogger Instance(Type type)
         {
-            if (_loggers.ContainsKey(type))
-                return _loggers[type];
+            if (Loggers.ContainsKey(type))
+                return Loggers[type];
             var typeLogger = new DomainLogger(type);
-            _loggers.Add(type, typeLogger);
+            Loggers.Add(type, typeLogger);
             return typeLogger;
         }
 

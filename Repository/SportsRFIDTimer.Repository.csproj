@@ -47,11 +47,6 @@
   <ItemGroup>
     <Compile Include="ApplicationStateMemoryRepository.cs" />
     <Compile Include="ApplicationStateRepository.cs" />
-    <Compile Include="IApplicationStateRepository.cs" />
-    <Compile Include="IRaceRepository.cs" />
-    <Compile Include="IRepository.cs" />
-    <Compile Include="IResultRepository.cs" />
-    <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RaceMemoryRepository.cs" />
     <Compile Include="RaceRepository.cs" />
@@ -63,6 +58,10 @@
     <ProjectReference Include="..\Contracts\SportsRFIDTimer.Contracts.csproj">
       <Project>{99916CB5-2FC5-42BA-B377-48057A204078}</Project>
       <Name>SportsRFIDTimer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\SportsRFIDTimer.Domain.csproj">
+      <Project>{911F8441-4C1E-4573-B02D-FF2A4A512414}</Project>
+      <Name>SportsRFIDTimer.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

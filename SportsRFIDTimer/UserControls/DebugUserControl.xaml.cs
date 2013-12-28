@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using Griffin.Decoupled.DomainEvents;
-using SportsRFIDTimer.Contracts.DomainEvents;
+using SportsRFIDTimer.Domain.Events;
 
 namespace SportsRFIDTimer.UserControls
 {

@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using SportsRFIDTimer.UserControls;
 
 namespace SportsRFIDTimer.Views
 {
@@ -13,7 +14,7 @@ namespace SportsRFIDTimer.Views
             InitializeComponent();
         }
 
-        public DialogWindow(string title, UserControl userControl)
+        public DialogWindow(string title, DialogUserControlBase userControl)
         {
             InitializeComponent();
 
@@ -21,7 +22,12 @@ namespace SportsRFIDTimer.Views
             Content = userControl;
             Width = userControl.Width+25;
             Height = userControl.Height+40;
-        }
 
+            userControl.CloseEvent += CloseWindow;
+        }
+        public void CloseWindow(object sender)
+        {
+            Close();
+        }
     }
 }

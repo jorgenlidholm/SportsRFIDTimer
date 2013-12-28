@@ -1,6 +1,6 @@
 using System;
-using Contracts;
 using PrismMVVMLibrary;
+using SportsRFIDTimer.Domain.User;
 
 namespace SportsRFIDTimer.ViewModels
 {
@@ -12,6 +12,8 @@ namespace SportsRFIDTimer.ViewModels
         {
             _user = user;
         }
+
+        public User User { get { return _user; } }
 
         public Guid Id
         {
@@ -65,6 +67,15 @@ namespace SportsRFIDTimer.ViewModels
                 _user.Meta = value;
                 RaisePropertyChanged(() => Meta);
             }
+        }
+
+        public void UpdateUser(UserViewModel newUser)
+        {
+            Name = newUser.Name;
+            Meta = newUser.Meta;
+            Email = newUser.Email;
+            Number = newUser.Number;
+            TagId = newUser.TagId;
         }
     }
 }

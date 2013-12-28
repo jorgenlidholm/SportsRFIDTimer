@@ -21,6 +21,7 @@
             </Menu.Resources>
             <MenuItem Header="_File"/>
             <MenuItem Header="Settings" ItemsSource="{Binding Settings}" ItemContainerStyle="{StaticResource ThemeMenuItemStyle}" />
+            <MenuItem Header="Help" ItemsSource="{Binding Help}" ItemContainerStyle="{StaticResource ThemeMenuItemStyle}"/>
         </Menu>
         <Grid HorizontalAlignment="Right" Margin="0,0,10,0" Height="600">
             <uc:MainWindowContent/>

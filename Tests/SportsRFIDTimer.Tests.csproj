@@ -71,6 +71,10 @@
       <Project>{99916CB5-2FC5-42BA-B377-48057A204078}</Project>
       <Name>SportsRFIDTimer.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Domain\SportsRFIDTimer.Domain.csproj">
+      <Project>{911F8441-4C1E-4573-B02D-FF2A4A512414}</Project>
+      <Name>SportsRFIDTimer.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Repository\SportsRFIDTimer.Repository.csproj">
       <Project>{DA28FCEF-967A-4EE5-92AE-1B29BA9E4B8F}</Project>
       <Name>SportsRFIDTimer.Repository</Name>

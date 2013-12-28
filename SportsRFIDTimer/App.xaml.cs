@@ -25,6 +25,7 @@ namespace SportsRFIDTimer
 
             DomainManager.Container = ConfigureGriffinContainer();
             DomainManager.Container.DispatchEvents();
+            DomainManager.Container.DispatchCommands();
             LogManager.Assign(new DomainLogManager());
 
 

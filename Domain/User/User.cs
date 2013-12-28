@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Contracts
+namespace SportsRFIDTimer.Domain.User
 {
     public class User
     {

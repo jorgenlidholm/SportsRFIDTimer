@@ -48,22 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationState.cs" />
-    <Compile Include="DomainEvents\MessageLogged.cs" />
-    <Compile Include="DomainEvents\TagRegistered.cs" />
-    <Compile Include="DomainEvents\UserCreated.cs" />
-    <Compile Include="Race.cs" />
-    <Compile Include="RaceTypeEnum.cs" />
-    <Compile Include="Result.cs" />
-    <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

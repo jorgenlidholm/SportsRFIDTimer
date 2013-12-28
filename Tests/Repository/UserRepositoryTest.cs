@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using Contracts;
 using FluentAssertions;
 using Griffin.Container;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SportsRFIDTimer.Domain.User;
 using SportsRFIDTimer.Repository;
 
 namespace SportsRFIDTimer.Tests.Repository

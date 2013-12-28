@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Contracts;
 
-namespace SportsRFIDTimer.Repository
+namespace SportsRFIDTimer.Domain.User
 {
     public interface IUserRepository : IRepository<User, Guid>
     {

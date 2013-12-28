@@ -12,17 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SportsRFIDTimer.ViewModels;
 
 namespace SportsRFIDTimer.UserControls
 {
     /// <summary>
-    /// Interaction logic for ManageUsersUserControl.xaml
+    /// Interaction logic for EditUserUserControlViewModel.xaml
     /// </summary>
-    public partial class ManageUsersUserControl : DialogUserControlBase
+    public partial class EditUserUserControl : DialogUserControlBase
     {
-        public ManageUsersUserControl()
+        private readonly EditUserUserControlViewModel _viewModel;
+
+        public EditUserUserControl()
         {
             InitializeComponent();
+        }
+
+        public EditUserUserControl(UserViewModel userViewModel)
+        {
+            InitializeComponent();
+            _viewModel = new EditUserUserControlViewModel(userViewModel);
+            DataContext = _viewModel;
         }
     }
 }

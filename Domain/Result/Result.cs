@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SportsRFIDTimer.Contracts
+namespace SportsRFIDTimer.Domain.Result
 {
     public class Result
     {
-        private List<DateTime> _registrations;
+        private readonly List<DateTime> _registrations;
 
         public Result(Guid raceId, Guid userId)
         {

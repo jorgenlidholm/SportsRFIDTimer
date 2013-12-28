@@ -2,8 +2,7 @@
 using Griffin.Decoupled.DomainEvents;
 using Griffin.Logging;
 
-
-namespace SportsRFIDTimer.Contracts.DomainEvents
+namespace SportsRFIDTimer.Domain.Events
 {
     public class TagRegistered : DomainEventBase
     {

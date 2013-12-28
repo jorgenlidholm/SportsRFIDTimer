@@ -2,9 +2,11 @@
 using Griffin.Container;
 using Griffin.Decoupled.DomainEvents;
 using Griffin.Logging;
-using SportsRFIDTimer.Contracts;
-using SportsRFIDTimer.Contracts.DomainEvents;
 using SportsRFIDTimer.Domain;
+using SportsRFIDTimer.Domain.Application;
+using SportsRFIDTimer.Domain.Events;
+using SportsRFIDTimer.Domain.Result;
+using SportsRFIDTimer.Domain.User;
 using SportsRFIDTimer.Repository;
 
 namespace SportsRFIDTimer.BusinessLogic.DomainHandlers.Users

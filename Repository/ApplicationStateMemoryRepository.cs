@@ -1,5 +1,6 @@
-﻿using Contracts;
+﻿
 using Griffin.Container;
+using SportsRFIDTimer.Domain.Application;
 
 namespace SportsRFIDTimer.Repository
 {

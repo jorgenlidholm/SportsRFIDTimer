@@ -97,7 +97,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Resources\Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\DebugUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\EditUserUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -106,6 +114,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\ManageUsersUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AboutUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,6 +141,10 @@
     <Compile Include="UserControls\DebugUserControl.xaml.cs">
       <DependentUpon>DebugUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\DialogUserControlBase.cs" />
+    <Compile Include="UserControls\EditUserUserControl.xaml.cs">
+      <DependentUpon>EditUserUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\MainWindowContent.xaml.cs">
       <DependentUpon>MainWindowContent.xaml</DependentUpon>
     </Compile>
@@ -137,11 +153,15 @@
     </Compile>
     <Compile Include="ViewModels\DebugUserControlViewModel.cs" />
     <Compile Include="ViewModels\DialogWindowViewModel.cs" />
+    <Compile Include="ViewModels\EditUserUserControlViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\ManageUsersUserControlViewModel.cs" />
     <Compile Include="ViewModels\MenuItemViewModel.cs" />
     <Compile Include="ViewModels\MessageBus.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="UserControls\AboutUserControl.xaml.cs">
+      <DependentUpon>AboutUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DialogWindow.xaml.cs">
       <DependentUpon>DialogWindow.xaml</DependentUpon>
     </Compile>
@@ -165,7 +185,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -201,6 +221,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\mushroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\minus.png" />
+    <Resource Include="Icons\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
