@@ -42,7 +42,7 @@ namespace SportsRFIDTimer.BusinessLogic.DomainHandlers.Users
             }
         }
 
-        private void RegisterTagWithUser(Guid value, TagRegistered domainEvent)
+        private static void RegisterTagWithUser(Guid value, TagRegistered domainEvent)
         {
             var userRepository = DomainManager.Container.Resolve<IUserRepository>();
             var user = userRepository.Get(value);
