@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data.Entity;
 using System.Windows;
 using Griffin.Container;
 using Griffin.Decoupled;
@@ -7,8 +8,10 @@ using Griffin.Logging;
 using OneTrueError.Reporting;
 using OneTrueError.Reporting.Submitters;
 using SportsRFIDTimer.BusinessLogic.DomainHandlers.Users;
+using SportsRFIDTimer.Domain.User;
 using SportsRFIDTimer.Repository;
 using SportsRFIDTimer.Domain;
+using SportsRFIDTimer.Repository.Dto;
 using SportsRFIDTimer.ViewModels;
 
 namespace SportsRFIDTimer
@@ -22,6 +25,8 @@ namespace SportsRFIDTimer
 
         public App()
         {
+            // DbContext configs
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SportsRfidTimerContext>());
 
             ConfigureOneTrueError();
             var logFile = ConfigurationManager.AppSettings["Application.Logging.FileName"];
@@ -36,6 +41,13 @@ namespace SportsRFIDTimer
 
             InitializeComponent();
 
+            var repo = new UserRepository();
+            repo.Save(new User("Jörgen Lidholm", 11){Email = "jorgen.lidholm@gmail.com", Meta = "GasGas EC 300", TagId = "EnTag"});
+            repo.Save(new User("Jonas Larsson", 34) { Email = "zyberspy@hotmail.com", Meta = "Husaberg FE 350", TagId = "EnAnnanTag" });
+            var user = repo.Find("Jörgen");
+            var user2 = repo.Find("EC");
+            LogManager.GetLogger<App>().Info("User: " + user);
+            LogManager.GetLogger<App>().Info("User: " + user);
         }
 
         protected override void OnStartup(StartupEventArgs e)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using SportsRFIDTimer.Domain.Race;
+using SportsRFIDTimer.Repository.Dto;
 
 namespace SportsRFIDTimer.Repository
 {
@@ -8,7 +9,12 @@ namespace SportsRFIDTimer.Repository
     {
         public Race Get(Guid id)
         {
-            throw new NotImplementedException();
+            Race race;
+            using (var ctx = new SportsRfidTimerContext())
+            {
+                race = ctx.Races.Find(id);
+            }
+            return race;
         }
 
         public void Save(Race entity)

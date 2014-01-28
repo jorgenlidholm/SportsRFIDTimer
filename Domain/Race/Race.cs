@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace SportsRFIDTimer.Domain.Race
 {
@@ -11,6 +12,7 @@ namespace SportsRFIDTimer.Domain.Race
             RaceType = raceType;
         }
 
+        [Key]
         public Guid Id { get; private set; }
         public RaceType RaceType { get; private set; }
         public String Name { get; set; }

@@ -1,9 +1,28 @@
-﻿<Window x:Class="SportsRFIDTimer.Views.MainWindow"
+﻿<mui:ModernWindow x:Class="SportsRFIDTimer.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:uc="clr-namespace:SportsRFIDTimer.UserControls"
         xmlns:vm="clr-namespace:SportsRFIDTimer.ViewModels"
-        Title="Sports RFID Timer" Height="850" Width="1024">
+                  xmlns:mui="clr-namespace:FirstFloor.ModernUI.Windows.Controls;assembly=FirstFloor.ModernUI"
+                  Title="Sports RFID Timer" Height="850" Width="1024">
+    <!--<Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <Storyboard x:Key="SlideRightAnimation">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(RangeBase.Value)" Storyboard.TargetName="slider1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="10"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SlideLeftAnimation">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(RangeBase.Value)" Storyboard.TargetName="slider1">
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource SlideLeftAnimation}"/>
+        </EventTrigger>
+    </Window.Triggers>
     
     <Window.DataContext>
         <vm:MainWindowViewModel/>
@@ -23,9 +42,17 @@
             <MenuItem Header="Settings" ItemsSource="{Binding Settings}" ItemContainerStyle="{StaticResource ThemeMenuItemStyle}" />
             <MenuItem Header="Help" ItemsSource="{Binding Help}" ItemContainerStyle="{StaticResource ThemeMenuItemStyle}"/>
         </Menu>
-        <Grid HorizontalAlignment="Right" Margin="0,0,10,0" Height="600">
-            <uc:MainWindowContent/>
-        </Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Height="400">
+            <StackPanel Width="1024">
+                <Button Content="Knapp" Click="ButtonBase_OnClick"/>
+               <uc:MainWindowContent Loaded="MainWindowContent_Loaded"/>-->
+            <!--</StackPanel>
+            <Slider Height="23" x:Name="slider1" Width="100" />
+            <StackPanel Width="1024">
+                <Button Content="Knasen" Click="ButtonBase_OnClick"/>-->
+                <!--<uc:MainWindowContent/>-->
+            <!--</StackPanel>
+        </StackPanel>
         <uc:DebugUserControl Margin="5"/>
-    </StackPanel>
-</Window>
+    </StackPanel>-->
+</mui:ModernWindow>

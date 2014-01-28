@@ -6,7 +6,7 @@ using SportsRFIDTimer.Domain.User;
 
 namespace SportsRFIDTimer.Repository
 {
-    [Component]
+    //[Component]
     public class UserMemoryRepository : IUserRepository
     {
         private readonly List<User> _users;

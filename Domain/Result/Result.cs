@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace SportsRFIDTimer.Domain.Result
 {
@@ -19,6 +20,7 @@ namespace SportsRFIDTimer.Domain.Result
             _registrations = new List<DateTime>();
         }
 
+        [Key]
         public Guid Id { get; set; }
         public Guid RaceId { get; private set; }
         public Guid UserId { get; private set; }
